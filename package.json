@@ -17,5 +17,8 @@
     "eslint-plugin-import": "^2.20.1",
     "webpack": "^4.43.0",
     "webpack-cli": "^3.3.11"
+  },
+  "dependencies": {
+    "mapbox-gl": "^1.10.1"
   }
 }

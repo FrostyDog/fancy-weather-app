@@ -5,23 +5,33 @@
   <title>Getting Started - dev</title>
   <link rel="stylesheet" href="./css/styles.css">
   <link rel="stylesheet" href="./css/base.css">
+  <link href='https://api.mapbox.com/mapbox-gl-js/v1.8.1/mapbox-gl.css' rel='stylesheet' />
+  <script src='https://api.mapbox.com/mapbox-gl-js/v1.8.1/mapbox-gl.js'></script>
 </head>
 
 <body>
-  <main class="flex-row" id ="main"> 
-    <div class="flex-column-start">
-      <section id="controls"></section>
-      <section id="today-weather"></section>
-      <section id="weather-forcast"></section>
-    </div>
-    <div class="flex-column-end">
-      <div class="search"></div>
-      <section id="geo-data"></section>
-    </div>
+  <main class="flex-row" id="main">
+      <div class="flex-column-start">
+        <section id="controls"></section>
+        <section id="today-weather"></section>
+        <section id="weather-forcast"></section>
+      </div>
+      <div class="flex-column-end">
+        <div class="search"></div>
+        <section id="geo-data">
+          <div id="map">
+
+          </div>
+          <div class="coordinates">
+
+          </div>
+        </section>
+      </div>
   </main>
 
 
   <script type="module" src="./src/index.js"></script>
+
 </body>
 
 </html>

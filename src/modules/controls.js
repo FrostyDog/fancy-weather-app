@@ -1,3 +1,5 @@
+import Option from "./option.js"
+
 export default class Controls {
   constructor(parent) {
     this.createControls(parent);
@@ -9,10 +11,10 @@ export default class Controls {
     this.bgButton.textContent = "Change";
     this.langButton = document.createElement("select");
     this.tempButton = document.createElement("select");
-    this.langButton.appendChild(document.createElement("option"));
-    this.langButton.appendChild(document.createElement("option"));
-    this.tempButton.appendChild(document.createElement("option"));
-    this.tempButton.appendChild(document.createElement("option"));
+    new Option(this.langButton, "Eng")
+    new Option(this.langButton, "PL")
+    new Option(this.tempButton, "F")
+    new Option(this.tempButton, "C")
     parent.appendChild(this.bgButton);
     parent.appendChild(this.langButton);
     parent.appendChild(this.tempButton);
@@ -23,7 +25,7 @@ export default class Controls {
     let random = Math.ceil(Math.random() * 6);
     main.style.backgroundImage = `url(./images/${random}.jpg)`
 
-    document.getElementById("main").addEventListener("click", () => {
+    this.bgButton.addEventListener("click", () => {
       random = Math.ceil(Math.random() * 6);
       main.style.backgroundImage = `url(./images/${random}.jpg)`
     });

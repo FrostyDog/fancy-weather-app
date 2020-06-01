@@ -7,4 +7,54 @@ main {
     -o-background-size: cover;
     background-size: cover;
     background-position: center;
+    color:white;
+    font-size: 2em;
+}
+
+.flex-column-start, .flex-column-end{
+height: 100%;
+width: 100%;
+background-color: rgba(0,0,0, 0.5);
+padding: 5em 3em;
+}
+/*
+.wrapper {
+  width: 100%;
+  height: 100%;
+} */
+
+#controls {
+  flex: 1;
+}
+
+#today-weather {
+  flex: 5;
+}
+
+#weather-forcast{
+  flex:3;
+}
+
+.search{
+  flex: 1;
+}
+
+#geo-data{
+  flex: 5;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+}
+
+.map {
+  flex:6;
+  width:300px;
+  height: 300px;
+
+}
+
+.coordinates{
+  flex: 2;
 }
